@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Company>Bradford Bruce</Company>
+    <Authors>Bradford Bruce</Authors>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Copyright>Copyright © 2020</Copyright>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
+    <Version>1.0.0.1</Version>
+    <Description>This application provides an easy way to create Architecture Decision Records</Description>
+  </PropertyGroup>
+  
+
+  <ItemGroup>
+    <Compile Remove="MarkDown\ColorCoder\**" />
+    <EmbeddedResource Remove="MarkDown\ColorCoder\**" />
+    <None Remove="MarkDown\ColorCoder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MarkDown\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Markdig" Version="0.22.0" />
+  </ItemGroup>
+
+</Project>
